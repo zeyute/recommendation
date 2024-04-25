@@ -1,0 +1,89 @@
+
+body{
+	background-image: url(../img/boby.jpg);
+	color: #FFFFFF;
+	background-size: 100%;
+}
+
+#content{
+	width: 100%;
+	background-color: rgba(211, 205, 205, 0.6);
+	overflow: hidden;
+}
+#content-top{
+	margin-top: 20px;
+}
+#content-top h3{
+	width: 100%;
+	text-align: center;
+	font-size: 24px;
+}
+.nr{
+	margin-top: 30px;
+	overflow: hidden;
+	height: auto;
+	margin-left: 40px;
+	margin-bottom: 50px;
+}
+.img-nr{
+	position: relative;
+	width: 500px;
+	height: 300px;
+	overflow: hidden;
+	border: 2px solid #FFFFFF;
+	padding: 0 0 0 0;
+	float: left;
+	cursor: pointer;
+}
+.img-nr img{
+	position: absolute;
+	width: 500px;
+	top: -270px;
+}
+.nr-text{
+	display: inline-block;
+	width: 500px;
+	padding-left: 80px;
+}
+.nr-text h4{
+	padding-top: 10px;
+	font-size: 20px;
+}
+.nr-text p{
+	padding-top: 20px;
+	text-indent: 2em;
+	font-size: 16px;
+	line-height: 34px;
+}
+.nr-text button{
+	margin-top: 20px;
+	width: 60px;
+	height: 30px;
+}
+#bottom{
+	height: 60px;
+	text-align: center;
+}
+#bottom p{
+	line-height: 30px;
+}
+/* 播放按钮的初始样式 */
+#playButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #97bff3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* 添加过渡效果 */
+    transition: transform 0.3s ease;
+}
+
+/* 播放按钮被点击时的样式 */
+#playButton:active {
+    /* 放大按钮 */
+    transform: scale(0.95);
+}

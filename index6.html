@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<title>信息反馈</title>
+		<link rel="stylesheet" type="text/css" href="css/head.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bottom.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index6.css"/>
+	</head>
+<body>
+    <div id="header">
+        <div id="header_con">
+            <p id="logo">信息反馈</p>
+            <!-- 添加播放按钮 -->
+				<button id="playButton">播放音乐</button>
+				<audio id="musicfx" loop>
+					<source src="music.ogg" type="audio/mpeg" id="hhh">
+				</audio>
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="index2.html">你的名字</a></li>
+                <li><a href="index3.html">你好世界</a></li>
+                <li><a href="index4.html">天气之子</a></li>
+                <li><a href="index5.html">你想活出怎样的人生</a></li>
+                <li><a href="index6.html">帮助反馈</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="feedback-container">
+        <h1>信息反馈</h1>
+        <form id="feedbackForm" onsubmit="return validateForm()">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">邮箱:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="feedback">反馈内容:</label><br>
+            <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea><br><br>
+
+            <input type="submit" value="提交">
+        </form>
+    </div>
+
+    <script src="index6.js"></script>
+    <script>
+        document.getElementById('playButton').addEventListener('click', function() {
+            var audioElement = document.getElementById('musicfx');
+            if (audioElement.paused) {
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
+        });
+        </script>
+</body>
+</html>

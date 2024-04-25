@@ -1,0 +1,82 @@
+body {  
+    background-image: url(../img/ndmz_buby.jpg);  
+    background-size: cover; /* 使用 cover 来确保背景图片覆盖整个容器 */  
+    font-family: Arial, sans-serif;  
+    margin: 0;  
+    padding: 20px;  
+    background-color: #f0f0f0;  
+}  
+  
+.feedback-container {    
+    max-width: 1120px;    
+    margin: 100px auto;  /* 水平和垂直居中 */  
+    padding: 20px;    
+    background-color: rgb(255,255,255,0.6);  
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);    
+    text-align: center; /* 确保内部元素水平居中 */  
+}    
+  
+.feedback-container h1 {    
+    text-align: center;
+    color: #333;    
+}    
+  
+.feedback-container label {    
+
+    display: block;    
+    text-align: center; /* 如果需要标签左对齐，可以设置为 left */  
+    margin: 0 auto 5px; /* 上下外边距为0，左右外边距自动 */  
+}    
+/* 播放按钮的初始样式 */
+#playButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #97bff3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* 添加过渡效果 */
+    transition: transform 0.3s ease;
+}
+
+/* 播放按钮被点击时的样式 */
+#playButton:active {
+    /* 放大按钮 */
+    transform: scale(0.95);
+}
+  
+.feedback-container input[type="text"],    
+.feedback-container input[type="email"],    
+.feedback-container textarea {    
+    display: inline-block; /* 使得 input 和 textarea 成为内联块级元素 */  
+    padding: 10px;    
+    border: 1px solid #ccc;    
+    border-radius: 4px;    
+    margin-bottom: 15px;    
+}    
+  
+.feedback-container textarea {    
+    resize: vertical;    
+}    
+  
+.feedback-container input[type="submit"] {    
+    padding: 10px 20px;    
+    background-color: #4CAF50; /* 绿色 */    
+    color: white;    
+    border: none;    
+    border-radius: 4px;    
+    cursor: pointer;    
+}    
+  
+.feedback-container input[type="submit"]:hover {    
+    background-color: #45a049; /* 深一点的绿色 */    
+}    
+  
+/* 验证错误样式 */    
+.feedback-container input.error,    
+.feedback-container textarea.error {    
+    border: 1px solid red;    
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>天气之子</title>
+		<link rel="stylesheet" type="text/css" href="css/head.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bottom.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index4.css"/>
+	</head>
+	<body>
+		<div id="header">
+			<div id="header_con">
+				<p id="logo">天气之子</p>
+				<!-- 添加播放按钮 -->
+				<button id="playButton">播放音乐</button>
+				<audio id="musicfx" loop>
+					<source src="music.ogg" type="audio/mpeg" id="hhh">
+				</audio>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="index2.html">你的名字</a></li>
+					<li><a href="index3.html">你好世界</a></li>
+					<li><a href="index4.html">天气之子</a></li>
+					<li><a href="index5.html">你想活出怎样的人生</a></li>
+					<li><a href="index6.html">帮助反馈</a></li>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="content_com">
+					<h3>宣传片</h3>
+					<div id="carousel">  
+						<!-- 图片列表 -->  
+						<div class="carousel-images">  
+							<img src="img\3.1.jpg" alt="Slide 1">  
+							<img src="img\3.2.jpg" alt="Slide 2">  
+							<img src="img\3.3.jpg" alt="Slide 3"> 
+							<img src="img\3.4.jpg" alt="Slide 4">  
+							<img src="img\3.5.jpg" alt="Slide 5">  
+							<!-- 可以继续添加更多图片 -->  
+						</div>  
+					</div>
+					<div id="img_v">
+						<video src="img\tqzz xc.mp4" controls width="800px" ></video>
+					<h3>详情介绍</h3>
+						<img src="img/nz.png" >
+						<img src="img/nvz.png" >
+					</div>
+					<div id="text_con">
+						<div class="text">
+							<p>男主：森岛帆高</p>
+							<p>配音：醍醐虎汰朗（日语）；高晗（普通话）</p>
+							<p>一个为了追逐光芒而离开偏远岛屿家乡的高中生。他离开了岛上的家，来到东京，找到一份在超自然现象杂志出版社的工作。但自从他参加新工作以来，天气一直很糟，每天都下雨。</p>
+						</div>
+						<div class="text">
+							<p>女主：天野阳菜</p>
+							<p>配音：森七菜（日语）；杨鸣（普通话）</p>
+							<p>阳菜似乎可以控制天气，当她祈祷时雨就停了，随着她合拢的双手，雨水就会被吸回天空。在城市的一角， 帆高与阳菜相遇了.</p>
+						</div>
+					</div>
+					<div id="text-bottom">
+						<p>“想尝试前往，那道光芒之中”</p>
+						<p>高中一年级的夏天，从离岛离家出走，来到东京的帆高。但是他的生活立马变得穷困，在度过孤独的每一天之后终于找到的工作，是为古怪的超自然杂志撰稿。</p>
+						<p>如同预示着他接下来的命运一般，连日不断地下雨。此时，在人潮熙熙攘攘的都市一角，帆高遇到了一位少女。</p>
+						<p>由于某些缘故，少女·阳菜和弟弟两人一起坚强生活。而她，拥有不可思议的能力。</p>
+						<p>“呐，现在开始就要放晴了哦”</p>
+						<p>雨逐渐停止，街道笼罩在美丽的光芒中。那是仅仅在心中祈祷，就能让天空放晴的力量——</p>
+					</div>
+				</div>
+			<div id="bottom">
+			<p>计算机设计</p>
+		</div>
+		</div>
+		<script>  
+			// JavaScript for carousel  
+			var carouselImages = document.querySelector('.carousel-images');  
+			var images = carouselImages.getElementsByTagName('img');  
+			var currentIndex = 0;  
+			var imageCount = images.length;  
+			  
+			function carousel() {  
+				var transform = 'translateX(' + (-currentIndex * 100) + '%)';  
+				carouselImages.style.transform = transform;  
+			}  
+			  
+			function nextSlide() {  
+				currentIndex++;  
+				if (currentIndex >= imageCount) {  
+					currentIndex = 0;  
+				}  
+				carousel();  
+			}  
+			  
+			function prevSlide() {  
+				currentIndex--;  
+				if (currentIndex < 0) {  
+					currentIndex = imageCount - 1;  
+				}  
+				carousel();  
+			}  
+			  
+			// 自动轮播  
+			setInterval(nextSlide, 3000);
+			document.getElementById('playButton').addEventListener('click', function() {
+            var audioElement = document.getElementById('musicfx');
+            if (audioElement.paused) {
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
+        });
+			</script>
+	</body>
+	</html>

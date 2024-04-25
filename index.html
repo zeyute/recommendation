@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>电影 介绍</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/head.css" />
+		<link rel="stylesheet" type="text/css" href="css/bottom.css" />
+	</head>
+	<body>
+		<div id="header">
+			<div id="header_con">
+				<p id="logo">动漫影视推荐</p>
+				<!-- 添加播放按钮 -->
+				<button id="playButton">播放音乐</button>
+				<audio id="musicfx" loop>
+					<source src="music.ogg" type="audio/mpeg" id="hhh">
+				</audio>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="index2.html">你的名字</a></li>
+					<li><a href="index3.html">你好世界</a></li>
+					<li><a href="index4.html">天气之子</a></li>
+					<li><a href="index5.html">你想活出怎样的人生</a></li>
+					<li><a href="index6.html">帮助反馈</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="content">
+			<div id="content-top">
+				<h3>电影推荐</h3>
+				<div class="nr">
+					<div class="img-nr">
+						<img src="img\ndmz.jpg">
+					</div>
+					<div class="nr-text">
+						<h4>《 你的名字 》</h4>
+						<p>《你的名字》是由新海诚执导，由神木隆之介、上白石萌音担任主要配音的一部原创日本动画电影。作品于2016年8月26日在日本上映。中国内地于2016年12月2日上映。作品讲述了男女高中生在梦中相遇，并寻找彼此的故事。中国大陆于2017年8月26日全网首播。</p>
+						<button type="button"><a href="index2.html">GO!</a></button>
+					</div>
+				</div>
+				<div class="nr">
+					<div class="img-nr">
+						<img src="img/nhsj.jpg">
+					</div>
+					<div class="nr-text">
+						<h4>《 你好世界 》</h4>
+						<p>《你好世界》是由伊藤智彦执导的原创动画电影，北村匠海、松坂桃李、滨边美波、子安武人等人参与配音。影片以2027年的日本京都为舞台，讲述了16岁的高中生直实为了拯救爱人瑠璃而卷入了现实与虚拟交织的记忆世界故事。该片于2019年9月20日在日本上映，2021年6月11日在中国大陆上映。</p>
+						<button type="button"><a href="index3.html">GO!</a></button>
+					</div>
+				</div>
+				<div class="nr">
+					<div class="img-nr">
+						<img src="img/tqzj.jpg">
+					</div>
+					<div class="nr-text">
+						<h4>《 天气之子 》</h4>
+						<p>《天气之子》是由新海诚执导、Comix Wave
+							Film负责制作的原创动画电影，该片讲述了少年帆高与拥有操控天气超能力的少女阳菜之间的奇幻爱情故事。影片于2019年7月19日在日本上映，中国香港由安乐影片代理，于2019年8月8日上映；中国台湾由车库娱乐代理，于2019年9月12日上映；中国内地由华夏电影引进，于2019年11月1日上映；
+							中国大陆于2020年7月21日全网首播。</p>
+						<button type="button"><a href="index4.html">GO!</a></button>
+					</div>
+				</div>
+				<div class="nr">
+					<div class="img-nr">
+						<img src="img\nxhc.jpg">
+					</div>
+					<div class="nr-text">
+						<h4>《 你想活出怎样的人生 》</h4>
+						<p>《 你想活出怎样的人生 》由宫崎骏导演 剧情奇幻类动漫影视，电影讲述了少年牧真人的母亲葬身火海后，他随父亲与继母组成新家庭。深陷悲伤的真人阴郁孤僻，难以融入新环境。一次意外，他跟随一只会说话的苍鹭闯入废弃的神秘塔楼，却不料进入了奇幻的“亡灵世界”，开始了一场不可思议的冒险……于2024年4月3日中国大陆上映。</p>
+						<button type="button"><a href="index5.html">GO!</a></button>
+					</div>
+				</div>
+			</div>
+		<div id="bottom">
+			<p>计算机设计</p>
+		</div>
+		</div>
+		<script>
+			document.getElementById('playButton').addEventListener('click', function() {
+				var audioElement = document.getElementById('musicfx');
+				if (audioElement.paused) {
+					audioElement.play();
+				} else {
+					audioElement.pause();
+				}
+			});
+		</script>
+	</body>
+</html>

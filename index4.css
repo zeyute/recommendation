@@ -1,0 +1,94 @@
+body{
+	background-image: url(../img/tqzz1.jpg);
+	background-size: 100%;
+}
+#content{
+	width: 100%;
+	background-color: rgb(255,255,255,0.6);
+	overflow: hidden;
+}
+#content h3{
+	margin-top: 20px;
+	text-align: center;
+	font-size: 50px;
+	font-family: "宋体";
+	color: #455c6f;
+}
+#carousel {    
+    position: relative;    
+    width: 800px; /* 轮播图容器的宽度 */  
+    height: 500px; /* 轮播图容器的高度 */  
+    overflow: hidden; /* 隐藏超出容器的内容 */  
+	margin-top: 20px;
+    margin-bottom: 10px; /* 根据需要调整间距 */  
+    margin-left: auto; /* 水平居中 */      
+    margin-right: auto; /* 水平居中 */       
+}    
+  
+.carousel-images {    
+    display: flex;    
+    transition: transform 0.5s ease-in-out; /* 平滑过渡效果 */  
+    width: 100%; /* 确保轮播图片列表的宽度与容器相同 */  
+}    
+  
+.carousel-images img {    
+    width: 100%; /* 图片宽度为容器宽度的100% */  
+    height: 100%; /* 图片高度为容器高度的100% */  
+    object-fit: cover; /* 保持图片的纵横比同时填充整个容器 */  
+    display: block;  
+}
+#content_com{
+	width: 1200px;
+	margin: auto;
+	text-align: center;
+}
+#img_v{
+	overflow: hidden;
+}
+.text{
+	text-align: left;
+	float: left;
+	width: 500px;
+	padding-left: 100px;
+}
+.text p{
+	padding-bottom: 20px;
+	font-size: 20px;
+	color: #00508A;
+}
+#text_con{
+	margin-top: 20px;
+	overflow: hidden;
+}
+#text-bottom{
+	margin: auto;
+	width: 800px;
+	margin-top: 50px;
+	text-align: left;
+	color: #00508A;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+#text-bottom p{
+	padding-bottom: 20px;
+}
+/* 播放按钮的初始样式 */
+#playButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #97bff3;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    /* 添加过渡效果 */
+    transition: transform 0.3s ease;
+}
+
+/* 播放按钮被点击时的样式 */
+#playButton:active {
+    /* 放大按钮 */
+    transform: scale(0.95);
+}

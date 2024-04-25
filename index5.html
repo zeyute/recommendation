@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>你想活出怎样的人生</title>
+		<link rel="stylesheet" type="text/css" href="css/head.css"/>
+		<link rel="stylesheet" type="text/css" href="css/bottom.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index5.css"/>
+	</head>
+	<body>
+		<div id="header">
+			<div id="header_con">
+				<p id="logo">你想活出怎样的人生</p>
+				<!-- 添加播放按钮 -->
+				<button id="playButton">播放音乐</button>
+				<audio id="musicfx" loop>
+					<source src="music.ogg" type="audio/mpeg" id="hhh">
+				</audio>
+				<ul>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="index2.html">你的名字</a></li>
+					<li><a href="index3.html">你好世界</a></li>
+					<li><a href="index4.html">天气之子</a></li>
+					<li><a href="index5.html">你想活出怎样的人生</a></li>
+					<li><a href="index6.html">帮助反馈</a></li>
+				</ul>
+			</div>
+			<div id="content">
+				<div id="content_com">
+					<h3>宣传片</h3>
+					<div id="carousel">  
+						<!-- 图片列表 -->  
+						<div class="carousel-images">  
+							<img src="img\4.1.jpg" alt="Slide 1">  
+							<img src="img\4.2.jpg" alt="Slide 2">  
+							<img src="img\4.3.jpg" alt="Slide 3"> 
+							<img src="img\4.4.jpg" alt="Slide 4">  
+							<img src="img\4.5.jpg" alt="Slide 5">  
+							<!-- 可以继续添加更多图片 -->  
+						</div>  
+					</div>
+					<div id="img_v">
+						<video src="img\nxhc xc.mp4" controls width="800px" ></video>
+					<h3>详情介绍</h3>
+						<img src="img\nxhc gx.jpg" >
+					</div>
+					<div id="text-bottom">
+						<p>《你想活出怎样的人生》是宫崎骏人生最后一部作品，
+							也是宫崎骏对全世界的发问。
+							这部反战主题的作品，融入了宫崎骏的成长故事和人性
+							的思考，也暗藏了作者对日本社会现状的无奈。
+							我们可以顺着日本历史时间线，进入到宫崎骏宏大而细
+							腻的世界观。
+							温暖可爱的动画长篇下，充满了讽刺和发人深省的反思，是一部一千人眼里有一千个哈姆雷特的恢宏封山之作。</p>
+						<p>【电影名字】</p>
+						<p>电影的名字叫你想活出怎样的人生（其他国家或地区翻译为苍鹭与少年），并不代表着一定要给你一个什么样答案，电影本身不就是人生的一种呢？人生本来就没有答案，你只能通过你的各种经历去寻找属于自己的答案。</p>
+						<p>【人生经历】</p>
+						<p>从一开始就说是文艺片了，这是他完全为自己制作的动
+							画，观众始终只有一位，那就是宫崎骏老师自己。
+							当时宫崎骏小的时候，日本投降前一个月，城市一半的房屋被毁，数以万计的居民流离失所。但他一直记得那次经历，明亮的火焰吞没了房屋，父亲被迫再次带着一家人撤离。
+							宫崎骏6岁时，他年轻的母亲患上了脊柱结核，卧床不起。母亲曾经活泼好动，现在却连翻身都做不到。当他敞开双手让母亲抱抱时，她哭了，作品中的每一个拥
+							抱，都是宫崎骏爷爷幻想过无数次的场景，因为办不到。他的父亲整天都在工作，剧中的父亲也是忙于自己的工厂。
+							老爷子辉煌的一生正是从40多岁开始正式启航，并在后来的吉卜力工作室接连不断的大放异彩，才让全世界的人们认识到了这么一位动画大师。或许这样他选择用前面1/3的篇幅来描写这样一个迷茫少年，就像他蹉跎的前半生一样。</p>
+					</div>
+				</div>
+				<div id="bottom">
+					<p>计算机设计</p>
+		</div>
+		</div>
+		<script>  
+			// JavaScript for carousel  
+			var carouselImages = document.querySelector('.carousel-images');  
+			var images = carouselImages.getElementsByTagName('img');  
+			var currentIndex = 0;  
+			var imageCount = images.length;  
+			  
+			function carousel() {  
+				var transform = 'translateX(' + (-currentIndex * 100) + '%)';  
+				carouselImages.style.transform = transform;  
+			}  
+			  
+			function nextSlide() {  
+				currentIndex++;  
+				if (currentIndex >= imageCount) {  
+					currentIndex = 0;  
+				}  
+				carousel();  
+			}  
+			  
+			function prevSlide() {  
+				currentIndex--;  
+				if (currentIndex < 0) {  
+					currentIndex = imageCount - 1;  
+				}  
+				carousel();  
+			}  
+			  
+			// 自动轮播  
+			setInterval(nextSlide, 3000);
+			document.getElementById('playButton').addEventListener('click', function() {
+            var audioElement = document.getElementById('musicfx');
+            if (audioElement.paused) {
+                audioElement.play();
+            } else {
+                audioElement.pause();
+            }
+        });
+			</script>
+	</body>
+	</html>
